@@ -1,0 +1,113 @@
+{
+	"tenantId":"7af8c3482a2f4abdb29bff3bdc1375f8",  
+	"poolName" : "norma_external",
+	"gatewayName" : "router1",
+	"vduds": [
+		{
+			"serverName":"HSS_S2", 
+			"flavorName": "m1.nice", 
+			"securityGroup": "icmp-ssh", 
+			"vmImageName" : "HSS_S2_demo",
+			"keyPairName": "NormaKeyPair",
+			"externalPort":{
+				"name":"hss_s2_port", 
+				"fixedIP": "192.168.120.2",
+				"floatingIP":"192.168.1.91",
+				"networkName": "slice_2_net"
+			},
+			"availabilityZone":"nova:buyo", 
+			"ports": 
+			[
+				{
+					"name": "60_3_s2",
+					"fixedIP": "192.168.60.3",
+					"macAddress": "fa:16:3e:22:c2:00",
+					"networkName": "s6a_s2"
+				}
+			] 
+		},{
+			"serverName":"MME_S2", 
+			"flavorName": "m1.nice", 
+			"securityGroup": "icmp-ssh", 
+			"vmImageName" : "MME_S2_demo",
+			"keyPairName": "NormaKeyPair", 
+			"externalPort":{
+				"name":"mme_s2_port", 
+				"fixedIP": "192.168.120.3",
+				"floatingIP":"192.168.1.72",
+				"networkName": "slice_2_net"
+			},
+			"availabilityZone":"nova:buyo", 
+			"ports": 
+			[
+	
+				{
+					"name": "50_2_s2",
+					"fixedIP": "192.168.50.2",
+					"macAddress": "fa:16:3e:22:c2:12",
+					"networkName": "s11_s2"
+				},
+				{
+					"name": "60_2_s2",
+					"fixedIP": "192.168.60.2",
+					"macAddress": "fa:16:3e:22:c2:13",
+					"networkName": "s6a_s2"
+				}
+				
+			] 
+		},{
+			"serverName":"SPGW_S2", 
+			"flavorName": "m1.nice", 
+			"securityGroup": "icmp-ssh", 
+			"vmImageName" : "SPGW_S2_demo",
+			"keyPairName": "NormaKeyPair",
+			"availabilityZone":"nova:buyo",  
+			"externalPort":{
+				"name":"spgw_s2_port", 
+				"fixedIP": "192.168.120.4",
+				"floatingIP":"192.168.1.73",
+				"networkName": "slice_2_net"
+			}, 		
+			"ports": 
+			[
+				{
+					"name": "50_3_s2",
+					"fixedIP": "192.168.50.3",
+					"macAddress": "fa:16:3e:22:c2:15",
+					"networkName": "s11_s2"
+				}, 
+				{
+					"name": "200_2_s2",
+					"fixedIP": "192.168.200.2",
+					"macAddress": "fa:16:3e:22:c2:15",
+					"networkName": "provider_s2"
+				}	
+				
+			]  
+		},{
+			"serverName":"R_LATENCY", 
+			"flavorName": "m1.medium", 
+			"securityGroup": "icmp-ssh", 
+			"vmImageName" : "lubuntu-img",
+			"keyPairName": "NormaKeyPair",
+			"availabilityZone":"nova:buyo",  
+			"externalPort":{
+				"name":"RL_s2_port", 
+				"fixedIP": "192.168.120.5",
+				"floatingIP":"192.168.1.92",
+				"networkName": "slice_2_net"
+			}, 		
+			"ports": 
+			[ 
+				{
+					"name": "200_3_s2",
+					"fixedIP": "192.168.200.3",
+					"macAddress": "fa:16:3e:22:c2:16",
+					"networkName": "provider_s2"
+				}	
+				
+			]  
+		}
+
+	]
+}

@@ -1,0 +1,217 @@
+{
+	"tenantId":"7af8c3482a2f4abdb29bff3bdc1375f8",  
+	"poolName" : "norma_external",
+	"gatewayName" : "router1",
+	"vduds": [
+		{
+			"serverName":"HSS_S1", 
+			"flavorName": "m1.nice", 
+			"securityGroup": "icmp-ssh", 
+			"vmImageName" : "HSS_S1_demo",
+			"keyPairName": "NormaKeyPair",
+			"externalPort":{
+				"name":"hss_s1_port", 
+				"fixedIP": "192.168.110.2",
+				"floatingIP":"192.168.1.90",
+				"networkName": "slice_1_net"
+			},
+			"availabilityZone":"nova:zamorano", 
+			"ports": 
+			[
+				{
+					"name": "40_3_s1",
+					"fixedIP": "192.168.40.3",
+					"macAddress": "fa:16:3e:22:c2:00",
+					"networkName": "s6a_s1"
+				}
+			] 
+		},{
+			"serverName":"MME_S1", 
+			"flavorName": "m1.nice", 
+			"securityGroup": "icmp-ssh", 
+			"vmImageName" : "MME_S1_demo",
+			"keyPairName": "NormaKeyPair", 
+			"externalPort":{
+				"name":"mme_s1_port", 
+				"fixedIP": "192.168.110.3",
+				"floatingIP":"192.168.1.70",
+				"networkName": "slice_1_net"
+			},
+			"availabilityZone":"nova:zamorano", 
+			"ports": 
+			[
+	
+				{
+					"name": "30_2_s1",
+					"fixedIP": "192.168.30.2",
+					"macAddress": "fa:16:3e:22:c2:12",
+					"networkName": "s11_s1"
+				},
+				{
+					"name": "40_2_s2",
+					"fixedIP": "192.168.40.2",
+					"macAddress": "fa:16:3e:22:c2:13",
+					"networkName": "s6a_s1"
+				}
+				
+			] 
+		},{
+			"serverName":"SPGW_S1", 
+			"flavorName": "m1.nice", 
+			"securityGroup": "icmp-ssh", 
+			"vmImageName" : "SPGW_S1_demo",
+			"keyPairName": "NormaKeyPair",
+			"availabilityZone":"nova:zamorano",  
+			"externalPort":{
+				"name":"spgw_s1_port", 
+				"fixedIP": "192.168.110.4",
+				"floatingIP":"192.168.1.71",
+				"networkName": "slice_1_net"
+			}, 		
+			"ports": 
+			[
+				{
+					"name": "30_3_s1",
+					"fixedIP": "192.168.30.3",
+					"macAddress": "fa:16:3e:22:c2:15",
+					"networkName": "s11_s1"
+				}, 
+				{
+					"name": "100_2_s1",
+					"fixedIP": "192.168.100.2",
+					"macAddress": "fa:16:3e:22:c2:15",
+					"networkName": "provider_s1"
+				}	
+				
+			]  
+		}	
+		,
+		{
+			"serverName":"STREAMING_SERVER", 
+			"flavorName": "m1.medium", 
+			"securityGroup": "icmp-ssh", 
+			"vmImageName" : "ImStreamingServer",
+			"keyPairName": "NormaKeyPair",
+			"availabilityZone":"nova:zamorano",  
+			"externalPort":{
+				"name":"streaming_server_s1_port", 
+				"fixedIP": "192.168.110.5",
+				"floatingIP":"192.168.1.94",
+				"networkName": "slice_1_net"
+			}, 		
+			"ports": 
+			[ 
+				{
+					"name": "100_3_s1",
+					"fixedIP": "192.168.100.3",
+					"macAddress": "fa:16:3e:22:c2:20",
+					"networkName": "provider_s1"
+				}, 
+				{
+					"name": "80_2_s1",
+					"fixedIP": "192.168.80.2",
+					"macAddress": "fa:16:3e:22:c2:21",
+					"networkName": "private_video_network"
+				}		
+			]  
+		},
+		{
+			"serverName":"SNOWMIX", 
+			"flavorName": "m1.large", 
+			"securityGroup": "icmp-ssh", 
+			"vmImageName" : "ImVideoMixer",
+			"keyPairName": "NormaKeyPair",
+			"availabilityZone":"nova:zamorano",  
+			"externalPort":{
+				"name":"snowmix_s1_port", 
+				"fixedIP": "192.168.110.6",
+				"floatingIP":"192.168.1.96",
+				"networkName": "slice_1_net"
+			}, 		
+			"ports": 
+			[ 
+				{
+					"name": "100_4_s1",
+					"fixedIP": "192.168.100.4",
+					"macAddress": "fa:16:3e:22:c2:22",
+					"networkName": "provider_s1"
+				}, 
+				{
+					"name": "80_3_s1",
+					"fixedIP": "192.168.80.3",
+					"macAddress": "fa:16:3e:22:c2:23",
+					"networkName": "private_video_network"
+				}		
+			]  
+		}, 
+		{
+			"serverName":"CAPTION_SERVER", 
+			"flavorName": "m1.medium", 
+			"securityGroup": "icmp-ssh", 
+			"vmImageName" : "ImCaptionsServer",
+			"keyPairName": "NormaKeyPair",
+			"availabilityZone":"nova:zamorano",  
+			"externalPort":{
+				"name":"caption_server_s1_port", 
+				"fixedIP": "192.168.110.7",
+				"floatingIP":"192.168.1.99",
+				"networkName": "slice_1_net"
+			}, 		
+			"ports": 
+			[  
+				{
+					"name": "80_4_s1",
+					"fixedIP": "192.168.80.4",
+					"macAddress": "fa:16:3e:22:c2:24",
+					"networkName": "private_video_network"
+				}		
+			]  
+		}, 
+		{
+			"serverName":"SIGNING_SERVER", 
+			"flavorName": "m1.medium", 
+			"securityGroup": "icmp-ssh", 
+			"vmImageName" : "ImSLServer",
+			"keyPairName": "NormaKeyPair",
+			"availabilityZone":"nova:zamorano",  
+			"externalPort":{
+				"name":"signing_server_s1_port", 
+				"fixedIP": "192.168.110.8",
+				"floatingIP":"192.168.1.89",
+				"networkName": "slice_1_net"
+			}, 		
+			"ports": 
+			[  
+				{
+					"name": "80_5_s1",
+					"fixedIP": "192.168.80.5",
+					"macAddress": "fa:16:3e:22:c2:25",
+					"networkName": "private_video_network"
+				}		
+			]  
+		}, 
+		{
+			"serverName":"MAIN_VIDEO_SERVER", 
+			"flavorName": "m1.4C8GRAM100GDisk", 
+			"securityGroup": "icmp-ssh", 
+			"vmImageName" : "ImMainVideosServer",
+			"keyPairName": "NormaKeyPair",
+			"availabilityZone":"nova:zamorano",  
+			"externalPort":{
+				"name":"main_video_server_s1_port", 
+				"fixedIP": "192.168.110.9",
+				"floatingIP":"192.168.1.81",
+				"networkName": "slice_1_net"
+			}, 		
+			"ports": 
+			[  
+				{
+					"name": "80_6_s1",
+					"fixedIP": "192.168.80.6",
+					"macAddress": "fa:16:3e:22:c2:26",
+					"networkName": "private_video_network"
+				}		
+			]  
+		}						
+	]
+}
