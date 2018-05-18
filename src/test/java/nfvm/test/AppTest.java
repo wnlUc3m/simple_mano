@@ -1,4 +1,4 @@
-package Gnorma.topologyVisualizer;
+package nfvm.test;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

@@ -1,4 +1,4 @@
-package nfmv.view;
+package nfvm.view;
 
 import java.awt.EventQueue;
 
