@@ -1,4 +1,4 @@
-package Gnorma.view;
+package nfmv.view;
 
 import java.awt.EventQueue;
 

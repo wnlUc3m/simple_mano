@@ -1,4 +1,4 @@
-package Gnorma.openstack_api_handler;
+package nfvm.openstack_api_handler;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -8,8 +8,8 @@ import org.openstack4j.api.Builders;
 import org.openstack4j.api.OSClient.OSClientV2;
 import org.openstack4j.openstack.OSFactory;
 
-import Gnorma.model.OpenStackNetwork;
-import Gnorma.model.OpenStackSubnet;
+import nfvm.model.OpenStackNetwork;
+import nfvm.model.OpenStackSubnet;
 
 import org.openstack4j.model.common.ActionResponse;
 import org.openstack4j.model.compute.FloatingIP;

@@ -1,4 +1,4 @@
-package Gnorma.dao;
+package nfvm.dao;
 
 /*
  * Abstract factory of MongoDB connectors

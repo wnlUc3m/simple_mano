@@ -1,4 +1,4 @@
-package Gnorma.dao;
+package nfvm.dao;
 
 /*
  * Supported Databases

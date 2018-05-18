@@ -1,4 +1,4 @@
-package Gnorma.model;
+package nfvm.model;
 
 import java.util.LinkedList;
 

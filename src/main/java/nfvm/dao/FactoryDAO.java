@@ -1,4 +1,4 @@
-package Gnorma.dao;
+package nfvm.dao;
 
 /*
  * Abstract factory in order to create an instance of an specific Database

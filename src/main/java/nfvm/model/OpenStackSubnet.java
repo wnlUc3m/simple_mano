@@ -1,4 +1,4 @@
-package Gnorma.model;
+package nfvm.model;
 
 public class OpenStackSubnet {
 

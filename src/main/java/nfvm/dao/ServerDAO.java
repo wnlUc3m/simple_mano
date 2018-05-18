@@ -1,8 +1,8 @@
-package Gnorma.dao;
+package nfvm.dao;
 
 import org.openstack4j.model.compute.Server;
 
-import Gnorma.model.OpenStackServer;
+import nfvm.model.OpenStackServer;
 
 public interface ServerDAO {
 

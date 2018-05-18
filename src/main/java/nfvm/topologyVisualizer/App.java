@@ -1,25 +1,14 @@
-package Gnorma.topologyVisualizer;
-import java.io.FileReader;
+package nfvm.topologyVisualizer;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.HashMap;
 import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
 import java.util.concurrent.TimeUnit;
-
-import org.openstack4j.model.compute.Server;
-import org.openstack4j.model.image.Image;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.gson.Gson;
-
-import Gnorma.model.NetTopologyDecriptor;
-import Gnorma.model.OpenStackNetwork;
-import Gnorma.model.OpenStackServer;
-import Gnorma.model.VnfsDecriptor;
-import Gnorma.openstack_api_handler.OpenStackHandler;
+import nfvm.model.NetTopologyDecriptor;
+import nfvm.model.OpenStackNetwork;
+import nfvm.model.VnfsDecriptor;
+import nfvm.openstack_api_handler.OpenStackHandler;
 
 
 
@@ -319,7 +308,7 @@ public class App{
     			VnfsDecriptor vnfd = objectMapper.readValue(jsonData, VnfsDecriptor.class);
     			System.out.println(vnfd.toString());
     			
-    			//TODO: create VNFs
+    			//TODO: create resources using json files
 
     		} catch (IOException e) {
     			e.printStackTrace();

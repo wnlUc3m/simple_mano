@@ -1,4 +1,4 @@
-package Gnorma.dao;
+package nfvm.dao;
 
 import org.bson.Document;
 import org.bson.conversions.Bson;
@@ -14,7 +14,7 @@ import com.mongodb.client.MongoDatabase;
 import com.mongodb.util.JSON;
 import com.mongodb.util.JSONParseException;
 
-import Gnorma.model.OpenStackServer;
+import nfvm.model.OpenStackServer;
 
 public class MongoServerDAO implements ServerDAO{
 
